@@ -1,9 +1,9 @@
 package Transport;
 
 public enum Tonnage {
-    N1(0.0,3.5),
-    N2(3.5, 12),
-    N3(12,0);
+    N1(0D,3.5),
+    N2(3.5, 12D),
+    N3(12D,null);
     private double from;
     private double to;
 
