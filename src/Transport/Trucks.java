@@ -1,6 +1,8 @@
 package Transport;
 
 public class Trucks extends Transport implements Competing {
+private Tonnage tonnage;
+
     double value;
    /* String transmission;
     private String type;
@@ -155,14 +157,22 @@ public class Trucks extends Transport implements Competing {
         this.numberOfSeats = numberOfSeats;
     }*/
 
+    public Tonnage getTonnage() {
+        return tonnage;
+    }
 
-    public Trucks(String marka, String model,/* String country, String color, int yearOfRelease, int maxSpeed,*/ double value){/*, String transmission, String regNumber, String type, int numberOfSeats) {*/
+    public void setTonnage(Tonnage tonnage) {
+        this.tonnage = tonnage;
+    }
+
+    public Trucks(String marka, String model,/* String country, String color, int yearOfRelease, int maxSpeed,*/ double value, Tonnage tonnage){/*, String transmission, String regNumber, String type, int numberOfSeats) {*/
         super(marka, model/*, yearOfRelease, country, color, maxSpeed*/);
         if (value == 0.0) {
             this.value = 1.5;
         } else {
             this.value = value;
         }
+        this.tonnage=tonnage;
        // this.transmission = transmission;
        // this.type = type;
        // this.regNumber = regNumber;
@@ -190,4 +200,11 @@ public class Trucks extends Transport implements Competing {
     public int maxSpeed() {
         return 0;
     }
-}
+    public void PrintType() {
+        if(tonnage==null){
+            System.out.println("Данных по авто недостаточно");
+        }else{
+            double from = tonnage.getFrom()==null?"":"от" + tonnage.getFrom();
+            double to =tonnage.getTo()==null?"":"до" + tonnage.getTo();
+            System.out.println("Грузоподъемность "+from+to);
+}}}

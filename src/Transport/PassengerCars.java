@@ -1,6 +1,9 @@
 package Transport;
 
 public class PassengerCars extends Transport implements Competing{
+private TypeBody typeBody;
+
+
     double value;
     //String transmission;
     //private String type;
@@ -102,6 +105,15 @@ public class PassengerCars extends Transport implements Competing{
 
   //  }
 
+*/
+
+    public TypeBody getTypeBody() {
+        return typeBody;
+    }
+
+    public void setTypeBody(TypeBody typeBody) {
+        this.typeBody = typeBody;
+    }
 
     public double getValue() {
         return value;
@@ -145,11 +157,12 @@ public class PassengerCars extends Transport implements Competing{
 
 
 
-    public PassengerCars(String marka, String model,/* String country, String color, int yearOfRelease, int maxSpeed,*/ double value/*, String transmission, String regNumber, String type, int numberOfSeats*/) {
+    public PassengerCars(String marka, String model,/* String country, String color, int yearOfRelease, int maxSpeed,*/ double value,TypeBody typeBody/*, String transmission, String regNumber, String type, int numberOfSeats*/) {
         super(marka,model/*,yearOfRelease,country,color,maxSpeed*/);
         if (value==0.0){
             this.value = 1.5;}
         else {this.value = value;}
+        this.typeBody=typeBody;
        // this.transmission=transmission;
        // this.type=type;
        // this.regNumber=regNumber;
@@ -177,4 +190,12 @@ public class PassengerCars extends Transport implements Competing{
     public int maxSpeed() {
         return 0;
     }
-}
+
+    @Override
+    public void PrintType() {
+        if(typeBody==null){
+            System.out.println("Данных по авто недостаточно");
+        }else{
+            System.out.println("Тип авто "+ typeBody);
+    }
+}}
