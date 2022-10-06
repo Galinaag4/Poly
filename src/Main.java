@@ -28,7 +28,7 @@ public class Main {
         System.out.println(liaz.toString());
         System.out.println(mersedes1.toString());
 
-        Transport.PrintType();
+         Transport.PrintType();
     }
 
 }
