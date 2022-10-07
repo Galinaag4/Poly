@@ -31,6 +31,7 @@ public class Main {
        lada.PrintType();
        gazel.PrintType();
        liaz.PrintType();
+       Driver<PassengerCars> vova = new Driver<PassengerCars>("Lada ","Grande ","Vova ","B",10,lada);
     }
 
 }

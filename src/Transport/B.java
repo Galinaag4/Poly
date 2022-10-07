@@ -6,5 +6,8 @@ public class B extends Driver{
         super(marka,model,name,license,experience,transport);
     }
 
-
+    @Override
+    public String toString() {
+        return "B{}";
+    }
 }
