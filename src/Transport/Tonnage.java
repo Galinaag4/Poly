@@ -3,7 +3,7 @@ package Transport;
 public enum Tonnage {
     N1(0D,3.5),
     N2(3.5, 12D),
-    N3(12D,null);
+    N3(12D,0);
     private double from;
     private double to;
 
@@ -20,4 +20,11 @@ public enum Tonnage {
         return to;
     }
 
+    @Override
+    public String toString() {
+        return "Tonnage{" +
+                "from=" + from +
+                ", to=" + to +
+                '}';
+    }
 }

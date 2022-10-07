@@ -1,7 +1,7 @@
 package Transport;
 
 public class PassengerCars extends Transport implements Competing{
-private TypeBody typeBody;
+private  TypeBody typeBody;
 
 
     double value;
@@ -192,7 +192,7 @@ private TypeBody typeBody;
     }
 
     @Override
-    public void PrintType() {
+    public  void PrintType() {
         if(typeBody==null){
             System.out.println("Данных по авто недостаточно");
         }else{

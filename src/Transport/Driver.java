@@ -4,9 +4,9 @@ public class Driver <T extends Transport & Competing>{
    private String name;
    private String license;
    private int experience;
-   private String transport;
+   private Transport transport;
 
-    public Driver(String marka, String model, String name, String license, int experience, String transport) {
+    public Driver(String marka, String model, String name, String license, int experience, Transport transport) {
         super();
         this.name = name;
         this.license = license;
@@ -14,18 +14,14 @@ public class Driver <T extends Transport & Competing>{
         this.transport=transport;
     }
 
+
+
     public String getName() {
         return name;
     }
 
-    public void setTransport(T transport) {
-        if (transport.getClass().equals(PassengerCars.class))
-        this.transport = "В";
-        if (transport.getClass().equals(Bus.class))
-            this.transport = "С";
-        if (transport.getClass().equals(Trucks.class))
-            this.transport = "D";
-
+    public void setTransport(Transport transport) {
+        this.transport = transport;
     }
 
     public String getLicense() {

@@ -1,9 +1,9 @@
 package Transport;
 
 public class B extends Driver{
-    public B(String name, String license, int experience,Transport transport) {
+    public B(String marka, String model, String name, String license, int experience, Transport transport) {
 
-        super(name,license,experience,transport);
+        super(marka,model,name,license,experience,transport);
     }
 
 

@@ -55,7 +55,7 @@ public class Bus extends Transport implements Competing{
         if(capacyty==null){
             System.out.println("Данных по авто недостаточно");
         }else{
-            System.out.println("Наполняемость "+ capacyty.getFrom() + capacyty.getTo());
+            System.out.println("Наполняемость  от "+ capacyty.getFrom()+ " до " + capacyty.getTo());
 
 }}}
 

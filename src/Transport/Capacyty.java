@@ -21,4 +21,12 @@ public enum Capacyty{
     public double getTo() {
         return to;
     }
+
+    @Override
+    public String toString() {
+        return "Capacyty{" +
+                "from=" + from +
+                ", to=" + to +
+                '}';
+    }
 }

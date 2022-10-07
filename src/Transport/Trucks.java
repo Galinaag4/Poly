@@ -204,7 +204,6 @@ private Tonnage tonnage;
         if(tonnage==null){
             System.out.println("Данных по авто недостаточно");
         }else{
-            double from = tonnage.getFrom()==null?"":"от" + tonnage.getFrom();
-            double to =tonnage.getTo()==null?"":"до" + tonnage.getTo();
-            System.out.println("Грузоподъемность "+from+to);
+            System.out.println("Грузоподъемность  от " +tonnage.getFrom()+" до "+ tonnage.getTo());
+
 }}}

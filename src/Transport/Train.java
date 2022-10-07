@@ -1,6 +1,6 @@
 package Transport;
 
-public class Train extends Transport {
+/*public class Train extends Transport {
     private int prise;
     private double time;
     private String station;
@@ -66,5 +66,5 @@ public class Train extends Transport {
 
         System.out.println("Заправь дизелем");
     }
-}
+}*/
 

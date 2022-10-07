@@ -16,6 +16,14 @@ public enum TypeBody {
     public void setType(String type) {
         this.type = type;
     }
+
+    @Override
+    public String toString() {
+        return "TypeBody{" +
+                "type='" + type + '\'' +
+                '}';
+    }
 }
+
 
 
