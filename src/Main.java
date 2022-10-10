@@ -19,16 +19,16 @@ public class Main {
         Trucks hyundai = new Trucks("Hyundai ", "Mighty ", 5.00, Tonnage.N1);
 
 
-        Bus ford = new Bus("Ford ", "Mondeo ", 1.7, Capacyty.Small);
-        Bus liaz = new Bus("Liaz ", "Kursor ", 3.5, Capacyty.Medium);
-        Bus mersedes1 = new Bus("Mersedes ", "Splinter ", 4.0, Capacyty.Big);
+        Bus ford = new Bus("Ford ", "Mondeo ", 1.7, Capacyty.SMALL);
+        Bus liaz = new Bus("Liaz ", "Kursor ", 3.5, Capacyty.MEDIUM);
+        Bus mersedes1 = new Bus("Mersedes ", "Splinter ", 4.0, Capacyty.BIG);
         System.out.println(ford.toString());
         System.out.println(liaz.toString());
         System.out.println(mersedes1.toString());
 
-        lada.PrintType();
-        gazel.PrintType();
-        liaz.PrintType();
+        lada.printType();
+        gazel.printType();
+        liaz.printType();
         DriverB vova = new DriverB("Lada ", "Grande ", "Vova ", "B", 10, lada);
         System.out.println("водитель " + vova.getName() + "управляет автомобилем " + lada.getMarka() + " и будет участвовать в заезде");
     }

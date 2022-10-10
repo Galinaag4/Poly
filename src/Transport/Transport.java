@@ -68,6 +68,6 @@ public abstract class Transport {
         System.out.println("Закончить движение");
     }
 
-    public abstract void PrintType();
+    public abstract void printType();
 }
 

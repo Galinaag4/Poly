@@ -182,7 +182,7 @@ private  TypeBody typeBody;
     }
 
     @Override
-    public double BestLapTime() {
+    public double bestLapTime() {
         return 0;
     }
 
@@ -192,7 +192,7 @@ private  TypeBody typeBody;
     }
 
     @Override
-    public  void PrintType() {
+    public  void printType() {
         if(typeBody==null){
             System.out.println("Данных по авто недостаточно");
         }else{

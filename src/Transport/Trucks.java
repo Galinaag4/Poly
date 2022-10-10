@@ -192,7 +192,7 @@ private Tonnage tonnage;
     }
 
     @Override
-    public double BestLapTime() {
+    public double bestLapTime() {
         return 0;
     }
 
@@ -200,7 +200,7 @@ private Tonnage tonnage;
     public int maxSpeed() {
         return 0;
     }
-    public void PrintType() {
+    public void printType() {
         if(tonnage==null){
             System.out.println("Данных по авто недостаточно");
         }else{

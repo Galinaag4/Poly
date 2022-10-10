@@ -1,11 +1,11 @@
 package Transport;
 
 public enum Capacyty{
-    VerySmall(0,10),
-    Small (10,25),
-    Medium (40,50),
-    Big (60,80),
-    VeryBig(100,120);
+    VERY_SMALL(0,10),
+    SMALL (10,25),
+    MEDIUM (40,50),
+    BIG (60,80),
+    VERY_BIG(100,120);
     private int from;
     private int to;
 

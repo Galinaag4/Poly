@@ -41,7 +41,7 @@ public class Bus extends Transport implements Competing{
     }
 
     @Override
-    public double BestLapTime() {
+    public double bestLapTime() {
         return 0;
     }
 
@@ -51,7 +51,7 @@ public class Bus extends Transport implements Competing{
     }
 
     @Override
-    public void PrintType() {
+    public void printType() {
         if(capacyty==null){
             System.out.println("Данных по авто недостаточно");
         }else{

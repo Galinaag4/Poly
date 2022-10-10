@@ -3,6 +3,6 @@ package Transport;
 public interface Competing {
 
     String pitstop();
-    double BestLapTime();
+    double bestLapTime();
     int maxSpeed();
 }
