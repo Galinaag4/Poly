@@ -172,6 +172,12 @@ private  TypeBody typeBody;
     }
 
     @Override
+    public boolean servise(){
+        System.out.println("может проходить диагностику");
+        return Math.random()>0.5;
+    }
+
+    @Override
     public String toString() {
         return getMarka() + getModel() + value+" ";// + color + getYearOfRelease()+" "+getCountry()+ transmission+" "+type+" "+regNumber+" "+numberOfSeats;
     }

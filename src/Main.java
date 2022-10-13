@@ -4,6 +4,13 @@ import Transport.*;
 
 public class Main {
     public static void main(String[] args){
+        boolean success = Data.validate("test","test","test");
+        if (success) {
+            System.out.println("Данные валидны");
+        }else{
+            System.out.println("Данные не валидны");
+        }
+
 
 
         PassengerCars lada = new PassengerCars("Lada ", "Grande ", 1.5, TypeBody.N1);
@@ -26,10 +33,31 @@ public class Main {
         System.out.println(liaz.toString());
         System.out.println(mersedes1.toString());
 
+        servise(lada,audi,volvo,kia,kamaz,mersedes,gazel,hyundai,ford,liaz,mersedes1);
+
+
+
+
         lada.printType();
         gazel.printType();
         liaz.printType();
         DriverB vova = new DriverB("Lada ", "Grande ", "Vova ", "B", 10, lada);
         System.out.println("водитель " + vova.getName() + "управляет автомобилем " + lada.getMarka() + " и будет участвовать в заезде");
+
+
+
     }
-}
+
+    private static void servise(Transport... transports){
+        for (int i = 0; i < transports.length ; i++) {
+            if(!transports[i].servise());{
+            try{
+            throw new RuntimeException("Автомобиль"+transports[i].getMarka()+transports[i].getModel() + " не прошел проверку");}
+            catch (RuntimeException e){
+                System.out.println(e.getMessage());
+            }
+        }
+    }
+
+
+}}

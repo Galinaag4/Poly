@@ -21,6 +21,7 @@ public abstract class Transport {
        // else {this.maxSpeed = maxSpeed;}
 
     }
+    public abstract boolean servise(){}
     public String getMarka() {
         return marka;
     }
@@ -36,6 +37,8 @@ public abstract class Transport {
     public void setModel(String model) {
         this.model = model;
     }
+
+
 
     //public int getYearOfRelease() {
     //    return yearOfRelease;

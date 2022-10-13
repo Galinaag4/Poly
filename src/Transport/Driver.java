@@ -6,12 +6,13 @@ public class Driver <T extends Transport & Competing>{
    private int experience;
    private Transport transport;
 
-    public Driver(String marka, String model, String name, String license, int experience, Transport transport) {
+    public Driver(String marka, String model, String name, String license, int experience, Transport transport) throws IllegalAccessException {
         super();
         this.name = name;
-        this.license = license;
+        setLicense(license);
         this.experience = experience;
         this.transport=transport;
+
     }
 
 
@@ -28,7 +29,10 @@ public class Driver <T extends Transport & Competing>{
         return license;
     }
 
-    public void setLicense(String license) {
+    public void setLicense(String license) throws IllegalAccessException {
+        if(license==null){
+            throw new IllegalAccessException("Необходимо указать категорию прав");
+        }
         this.license = license;
     }
 

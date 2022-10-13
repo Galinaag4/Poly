@@ -200,6 +200,13 @@ private Tonnage tonnage;
     public int maxSpeed() {
         return 0;
     }
+
+    @Override
+    public boolean servise(){
+        System.out.println("может проходить диагностику");
+        return Math.random()>0.75;
+    }
+
     public void printType() {
         if(tonnage==null){
             System.out.println("Данных по авто недостаточно");
