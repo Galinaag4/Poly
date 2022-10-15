@@ -122,6 +122,10 @@ private  TypeBody typeBody;
     public void setValue(double value) {
         this.value = value;
     }
+    public void repair() {
+        System.out.println( "Легковая машина"+ getModel()+getMarka()+"починена");
+
+    }
 
     //public String getTransmission() {
       //  return transmission;

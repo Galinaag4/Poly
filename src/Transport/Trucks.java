@@ -206,6 +206,10 @@ private Tonnage tonnage;
         System.out.println("может проходить диагностику");
         return Math.random()>0.75;
     }
+    public void repair() {
+        System.out.println( "Грузовик"+ getModel()+getMarka()+"починен");
+
+    }
 
     public void printType() {
         if(tonnage==null){

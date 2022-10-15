@@ -1,8 +1,15 @@
 package Transport;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public abstract class Transport {
     private String marka;
     private String model;
+    private final List<Driver<?>> drivers = new ArrayList<>();
+    private final List<Mechanic<?>> mechanics = new ArrayList<>();
+    private final List<Sponsor> sponsors = new ArrayList<>();
    // private int yearOfRelease;
    // private String  country;
    // public String color;
@@ -10,6 +17,7 @@ public abstract class Transport {
     public Transport(String marka, String model){//, int yearOfRelease, String country, String color, int maxSpeed) {
         this.marka = marka;
         this.model = model;
+
        // this.yearOfRelease = yearOfRelease;
        // this.country = country;
       //  if(color==null||color.isEmpty()){
@@ -21,7 +29,22 @@ public abstract class Transport {
        // else {this.maxSpeed = maxSpeed;}
 
     }
-    public abstract boolean servise(){}
+    public boolean servise(){
+        return false;
+    }
+    public void addDriver(Driver<?>... drivers){
+        this.drivers.addAll(Arrays.asList(drivers));
+
+    }
+    public void addMechanic(Mechanic<?>... mechanics){
+        this.mechanics.addAll(Arrays.asList(mechanics));
+
+    }
+    public void addSponsor(Sponsor... sponsor){
+        this.sponsors.addAll(Arrays.asList(sponsor));
+
+    }
+
     public String getMarka() {
         return marka;
     }
@@ -38,9 +61,18 @@ public abstract class Transport {
         this.model = model;
     }
 
+    public List<Driver<?>> getDrivers() {
+        return drivers;
+    }
 
+    public List<Mechanic<?>> getMechanics() {
+        return mechanics;
+    }
 
-    //public int getYearOfRelease() {
+    public List<Sponsor> getSponsors() {
+        return sponsors;
+    }
+//public int getYearOfRelease() {
     //    return yearOfRelease;
    // }
 
@@ -72,5 +104,8 @@ public abstract class Transport {
     }
 
     public abstract void printType();
+
+    public void repair() {
+    }
 }
 
