@@ -1,15 +1,13 @@
 package Transport;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public abstract class Transport {
     private String marka;
     private String model;
     private final List<Driver<?>> drivers = new ArrayList<>();
-    private final List<Mechanic<?>> mechanics = new ArrayList<>();
-    private final List<Sponsor> sponsors = new ArrayList<>();
+    private final Set<Sponsor> sponsors = new HashSet<>();
+    private final Set<Mechanic<?>> mechanics = new HashSet<>();
    // private int yearOfRelease;
    // private String  country;
    // public String color;
@@ -65,11 +63,11 @@ public abstract class Transport {
         return drivers;
     }
 
-    public List<Mechanic<?>> getMechanics() {
+    public Set<Mechanic<?>> getMechanics() {
         return mechanics;
     }
 
-    public List<Sponsor> getSponsors() {
+    public Set<Sponsor> getSponsors() {
         return sponsors;
     }
 //public int getYearOfRelease() {
@@ -106,6 +104,19 @@ public abstract class Transport {
     public abstract void printType();
 
     public void repair() {
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Transport)) return false;
+        Transport transport = (Transport) o;
+        return Objects.equals(getMarka(), transport.getMarka()) && Objects.equals(getModel(), transport.getModel()) && Objects.equals(getDrivers(), transport.getDrivers()) && Objects.equals(getMechanics(), transport.getMechanics()) && Objects.equals(getSponsors(), transport.getSponsors());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getMarka(), getModel(), getDrivers(), getMechanics(), getSponsors());
     }
 }
 
